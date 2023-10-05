@@ -3,7 +3,6 @@
     <head>
         <title>WebApps Assignment 6 cruise Page</title>
     </head>
- 
 <body>
 
 <div class="container">
@@ -11,7 +10,7 @@
     <div class="form-group">
    <form>
     <div>
-       <label for="cabin">Shared Cabin</label>
+       <label for="cabin">Shares Cabin</label>
        <input type="checkbox" id="cabin" value="True"><br>
     </div>
     <br>
@@ -58,17 +57,16 @@
 let my_cruise = {};
 
 function selectCruise() {
+    my_cruise = {};
+    let cabinCheckbox = document.getElementById("cabin");
+    let breakfastCheckbox = document.getElementById("breakfast");
+    let poolCheckbox = document.getElementById("pool");
 
-my_cruise = {};
-let cabinCheckbox = document.getElementById("cabin");
-let breakfastCheckbox = document.getElementById("breakfast");
-let poolCheckbox = document.getElementById("pool");
-
-my_cruise.shared = cabinCheckbox.checked;
-my_cruise.breakfast = breakfastCheckbox.checked;
-my_cruise.pool = poolCheckbox.checked;
-let cruiseResultElement = document.getElementById("cruiseResult");
-cruiseResultElement.innerHTML = "Selected Cruise Options: " + JSON.stringify(my_cruise);
+    my_cruise.shared = cabinCheckbox.checked;
+    my_cruise.breakfast = breakfastCheckbox.checked;
+    my_cruise.pool = poolCheckbox.checked;
+    let cruiseResultElement = document.getElementById("cruiseResult");
+    cruiseResultElement.innerHTML = "Selected Cruise Options: " + JSON.stringify(my_cruise);
 }
 function updateCruise() {
     let days = document.getElementById("days").value;
