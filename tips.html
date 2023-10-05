@@ -13,7 +13,6 @@
         <input type="number" id="base_amount" name="base_amount" value="50"><br>
         </div>
         <br>
-
         <div class="form-group">
         <label for="tip_percent">Enter the tip percent </label>
         <input type="number" id="tip_percent" name="tip_percent" value="15"><br><br>
@@ -45,7 +44,7 @@
     <p id="calculationResult"></p>
     </div>
     <script> 
-        function tips() {
+    function tips() {
       let baseAmount = parseFloat(document.getElementById("base_amount").value);
       let tipPercent = parseFloat(document.getElementById("tip_percent").value);
       let myOutput = "";
