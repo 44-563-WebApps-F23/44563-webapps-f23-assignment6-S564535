@@ -17,7 +17,7 @@
         <div class="form-group">
         <label for="tip_percent">Enter the tip percent </label>
         <input type="number" id="tip_percent" name="tip_percent" value="15"><br><br>
-        <!-- Add the button for showing result -->
+
         <input type="button" onclick="tips()" value="Show tip"><br>
         </div>
     </form>
@@ -37,12 +37,11 @@
         </div><br>
         <div class="form-group">
         <input type="radio" id="product" name="operation" value="product" onclick="chooseOp()">
-        <label for="product">Product</label><br>
+        <label for="product">Product</label>
+        <br>
         </div>
         <br>
-    
     </form>
-    <!-- Add a <p> to display the results -->
     <p id="calculationResult"></p>
     </div>
     <script> 
@@ -57,7 +56,6 @@
           myOutput += (tipPercent+i*4)+ "% is  $" + calculatedTip.toFixed(2) + "; "+"\n";
           
       }
-  
       let tipResultsElement = document.getElementById("tipsResults");
       tipResultsElement.innerHTML = "Tips are: " + myOutput;
   }
